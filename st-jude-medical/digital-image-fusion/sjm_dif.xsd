@@ -1,0 +1,135 @@
+<!--
+  Inofficial XML schema for St. Jude Medical's Digital Image Fusion file format
+  Author: Matthias Bock
+  License: GNU Affero GPL v3
+-->
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="typeColorRGBA">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="8"/>
+      <xsd:maxLength value="8"/>
+      <xsd:pattern value="[a-fA-F0-9]*"/>
+    </xsd:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeIntArray">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[\+\-0-9 ]*"/>
+    </xsd:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeFloatArray">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[\+\-0-9\.eE ]*"/>
+    </xsd:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeModality">
+    <!-- A list of DICOM modality abbreviations can be found here: https://wiki.cancerimagingarchive.net/display/Public/DICOM+Modality+Abbreviations -->
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="2"/>
+      <xsd:maxLength value="8"/>
+      <xsd:pattern value="[A-Z]*"/>
+    </xsd:restriction>
+  </xs:simpleType>
+
+  <xs:element name="DIF"/>
+  <xs:complexType>
+    <!-- Contains exactly one DIFHeader and one DIFBody -->
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="DIFHeader">
+        <xs:complexType>
+          <xs:element name="Version" type="xs:string"/>
+          <xs:element name="VendorVersion" type="xs:string"/>
+          <xs:element name="PatientName" type="xs:string"/>
+          <xs:element name="PatientID" type="xs:integer"/>
+          <xs:element name="PatientBirthDate" type="xs:string"/>
+          <xs:element name="PatientGender" type="xs:string"/>
+          <xs:element name="StudyId" type="xs:integer"/>
+          <xs:element name="SeriesNumber" type="xs:integer"/>
+          <xs:element name="StudyDate" type="xs:date"/>
+          <xs:element name="StudyTime" type="xs:time"/>
+          <xs:element name="SeriesDate" type="xs:date"/>
+          <xs:element name="SeriesTime" type="xs:time"/>
+          <xs:element name="Modality" type="typeModality"/>
+          <xs:element name="RefPhysName" type="xs:string"/>
+          <xs:element name="SeriesDesc" type="xs:string"/>
+          <xs:element name="OperatorComments" type="xs:string"/>
+          <xs:element name="SegmentationDate" type="xs:date"/>
+          <xs:element name="SegmentationTime" type="xs:time"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DIFBody">
+        <xs:complexType>
+          <xs:element name="Volumes">
+            <xs:complexType>
+              <xs:element name="Volume">
+                <xs:complexType>
+                  <xs:element name="Vertices" type="typeFloatArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Normals" type="typeFloatArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Polygons" type="typeIntArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Surface_of_origin" type="typeIntArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Map_data" type="typeFloatArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Map_color" type="typeFloatArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Map_status" type="typeIntArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Color_high_low" type="typeFloatArray">
+                    <xs:complexType>
+                      <xs:attribute name="number" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="AP_MapViewMatrix" type="typeFloatArray"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:attribute name="number" type="xs:integer" use="required"/>
+              <xs:attribute name="color" type="typeColorRGBA"/>
+            </xs:complexType>
+          </xs:element>
+          <!-- Relaxed parsing for labels due to lack of examples -->
+          <xs:element name="Labels">
+            <xs:complexType mixed="true">
+              <xs:any minOccurs="0"/>
+              <xs:attribute name="number" type="xs:integer"/>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ObjectMap">
+            <xs:complexType>
+              <xs:element name="Rotation" type="typeFloatArray"/>
+              <xs:element name="Translation" type="typeFloatArray"/>
+              <xs:element name="Scaling" type="typeFloatArray"/>
+              <xs:element name="MD5Signature" type="xs:string"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
