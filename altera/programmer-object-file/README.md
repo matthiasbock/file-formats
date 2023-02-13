@@ -1,5 +1,5 @@
 
-## Programmer Object File (POF)
+# Programmer Object File (POF)
 
 * Vendor: Altera / Intel
 * Software: Quartus-II and others
