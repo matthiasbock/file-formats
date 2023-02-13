@@ -3,8 +3,11 @@
 
 * Vendor: Altera / Intel
 * Software: Quartus-II and others
-* Purpose: Stores the bitstream of a programmable logic device alongside some metadata for use by a hardware programming software and device
-* Base format: binary
+* Filename extension: .pof
+* Formatting: binary
+* Proprietary: vendor-specific and undocumented
+* Stores the configuration of a programmable logic device (bitstream) alongside some metadata
+* Intended for use by a hardware programming software and device
 
 ## Structure
 

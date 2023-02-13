@@ -1,7 +1,12 @@
 
 # SRAM Object File (SOF)
 
-Stores the configuration of SRAM-based programmable logic devices.
+* Vendor: Altera / Intel
+* Software: Quartus-II and others
+* Filename extension: .sof
+* Formatting: binary
+* Proprietary: vendor-specific and undocumented
+* Stores the configuration of SRAM-based programmable logic devices
 
 ## Links
 
