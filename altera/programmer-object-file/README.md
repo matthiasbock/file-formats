@@ -32,3 +32,7 @@ and a checksum.
 * https://www.dataman.com/dataman-4848lv48xp48uxp-pof-file-support
 * https://www.microchip.com/en-us/products/fpgas-and-plds/spld-cplds/pld-design-resources
 * https://github.com/programmable-logic-tools/altera-max-tools/tree/master/src/pof
+* http://www.pldtool.com/pld-file-formats
+* https://community.intel.com/t5/Programmable-Devices/I-want-knowing-POF-file-format-structures/td-p/74357
+  * https://community.intel.com/t5/Programmable-Devices/I-want-knowing-POF-file-format-structures/m-p/74372
+  * http://ftp.dataio.com/main/manuals/unifam/translation%20formats.pdf
