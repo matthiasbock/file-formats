@@ -1,5 +1,5 @@
 
-## Xilinx XC2064 FPGA bitstream
+## Xilinx XC2064 FPGA bitstream (RBT)
 
 * Company: Xilinx
 * Software: ?

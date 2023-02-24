@@ -1,5 +1,5 @@
 
-## Vector CANalyzer database
+## Vector CANalyzer database (DBC)
 
 * Company: Vector
 * Software: CANalyzer

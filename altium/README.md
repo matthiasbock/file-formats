@@ -1,7 +1,7 @@
 
 ## Altium
 
-Altium stores documents in Microsoft's Compound Document format.
+Altium stores documents in Microsoft Compound Document format.
 
 ### Links
 

@@ -1,5 +1,5 @@
 
-# Carl Zeiss Imaging data file
+# Carl Zeiss Imaging data file (CZI)
 
 * Company: Zeiss
 * Software: ZEN and other 3rd-party

@@ -1,5 +1,5 @@
 
-## Xilinx Waveform Database
+## Xilinx Waveform Database (WDB)
 
 * Company: Xilinx
 * Software: Vivado

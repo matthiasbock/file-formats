@@ -1,5 +1,5 @@
 
-## Xilinx Waveform Configuration file format
+## Xilinx Waveform Configuration file format (WCFG)
 
 * Company: Xilinx
 * Software: Vivado

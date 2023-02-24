@@ -1,5 +1,5 @@
 
-## CRV file format
+## VCarve file format (CRV)
 
 * Company: Vectric
 * Software: VCarve

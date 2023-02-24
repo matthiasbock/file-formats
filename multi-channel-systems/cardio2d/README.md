@@ -1,5 +1,5 @@
 
-## Multi Channel Systems Cardio2D
+## Multi Channel Systems Cardio2D (C2D)
 
 * Company: Multi Channel Systems
 * Software: Cardio2D
