@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DieCutLabel Version="8.0" Units="twips">
+   <PaperOrientation>Landscape</PaperOrientation>
+   <Id>Address</Id>
+   <PaperName>30252 Address</PaperName>
+   <DrawCommands>
+      <RoundRectangle X="0" Y="0" Width="1581" Height="5040" Rx="270" Ry="270" />
+   </DrawCommands>
+   <ObjectInfo>
+      <AddressObject>
+         <Name>Address</Name>
+         <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+         <BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+         <LinkedObjectName />
+         <Rotation>Rotation0</Rotation>
+         <IsMirrored>False</IsMirrored>
+         <IsVariable>True</IsVariable>
+         <HorizontalAlignment>Left</HorizontalAlignment>
+         <VerticalAlignment>Middle</VerticalAlignment>
+         <TextFitMode>None</TextFitMode>
+         <UseFullFontHeight>True</UseFullFontHeight>
+         <Verticalized>False</Verticalized>
+         <StyledText>
+            <Element>
+               <String>Click here to enter address</String>
+               <Attributes>
+                  <Font Family="Helvetica" Size="13" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+                  <ForeColor Alpha="255" Red="170" Green="170" Blue="170" />
+               </Attributes>
+            </Element>
+         </StyledText>
+         <ShowBarcodeFor9DigitZipOnly>False</ShowBarcodeFor9DigitZipOnly>
+         <BarcodePosition>Suppress</BarcodePosition>
+         <LineFonts>
+            <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+            <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+            <Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+         </LineFonts>
+      </AddressObject>
+      <Bounds X="331.2" Y="57.59995" Width="0" Height="0" />
+   </ObjectInfo>
+   <ObjectInfo>
+      <TextObject>
+         <Name>FirstName</Name>
+         <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+         <BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+         <LinkedObjectName />
+         <Rotation>Rotation0</Rotation>
+         <IsMirrored>False</IsMirrored>
+         <IsVariable>False</IsVariable>
+         <HorizontalAlignment>Left</HorizontalAlignment>
+         <VerticalAlignment>Middle</VerticalAlignment>
+         <TextFitMode>ShrinkToFit</TextFitMode>
+         <UseFullFontHeight>True</UseFullFontHeight>
+         <Verticalized>False</Verticalized>
+         <StyledText>
+            <Element>
+               <String>First Name</String>
+               <Attributes>
+                  <Font Family="Helvetica" Size="18" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+                  <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+               </Attributes>
+            </Element>
+         </StyledText>
+      </TextObject>
+      <Bounds X="331.2" Y="57.59995" Width="4320" Height="600" />
+   </ObjectInfo>
+   <ObjectInfo>
+      <TextObject>
+         <Name>LastName</Name>
+         <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+         <BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+         <LinkedObjectName />
+         <Rotation>Rotation0</Rotation>
+         <IsMirrored>False</IsMirrored>
+         <IsVariable>False</IsVariable>
+         <HorizontalAlignment>Left</HorizontalAlignment>
+         <VerticalAlignment>Middle</VerticalAlignment>
+         <TextFitMode>ShrinkToFit</TextFitMode>
+         <UseFullFontHeight>True</UseFullFontHeight>
+         <Verticalized>False</Verticalized>
+         <StyledText>
+            <Element>
+               <String>Last Name</String>
+               <Attributes>
+                  <Font Family="Helvetica" Size="18" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+                  <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+               </Attributes>
+            </Element>
+         </StyledText>
+      </TextObject>
+      <Bounds X="345.6" Y="432" Width="4320" Height="600" />
+   </ObjectInfo>
+   <ObjectInfo>
+      <TextObject>
+         <Name>MajorGradDate</Name>
+         <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+         <BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+         <LinkedObjectName />
+         <Rotation>Rotation0</Rotation>
+         <IsMirrored>False</IsMirrored>
+         <IsVariable>False</IsVariable>
+         <HorizontalAlignment>Left</HorizontalAlignment>
+         <VerticalAlignment>Middle</VerticalAlignment>
+         <TextFitMode>ShrinkToFit</TextFitMode>
+         <UseFullFontHeight>True</UseFullFontHeight>
+         <Verticalized>False</Verticalized>
+         <StyledText>
+            <Element>
+               <String>Major</String>
+               <Attributes>
+                  <Font Family="Helvetica" Size="18" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+                  <ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+               </Attributes>
+            </Element>
+         </StyledText>
+      </TextObject>
+      <Bounds X="331.2" Y="864" Width="4320" Height="600" />
+   </ObjectInfo>
+</DieCutLabel>
