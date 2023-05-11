@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://developers.dymo.com/#/article/1417 -->
+<html manifest="" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="https://developers.dymo.com/wp-content/plugins/wordpress-mobile-pack/export/content.php?content=androidmanifest">
+<title>DYMO Developer SDK Support Blog</title>
+<noscript>Your browser does not support JavaScript!</noscript>
+
+<link rel="stylesheet" href="./DYMO Developer SDK Support Blog_files/bundle.css">
+<link rel="stylesheet" href="./DYMO Developer SDK Support Blog_files/phone.css" type="text/css">
+
+<link rel="stylesheet" href="./DYMO Developer SDK Support Blog_files/font-1.css" type="text/css">
+
+<script type="text/javascript" pagespeed_no_defer="">
+		window.__APPTICLES_BOOTSTRAP_DATA__ = {
+			CONFIG_PATH: 'https://developers.dymo.com/wp-content/plugins/wordpress-mobile-pack/export/content.php?content=exportsettings'
+		};
+	</script>
+<script src="./DYMO Developer SDK Support Blog_files/app.js" type="text/javascript"></script>
+<link rel="canonical" href="https://developers.dymo.com/2021/11/17/driver-only-package/"></head>
+<body style="" class="grade-a platform-browser platform-linux platform-ready">
+<ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none"><ion-side-menus enable-menu-with-back-views="true" class="pane view" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><ion-side-menu-content class="menu-content pane"><ion-nav-view name="navView" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-view cache-view="false" class="pane" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><ion-nav-bar class="bar bar-clear nav-bar-container" nav-bar-transition="ios" nav-bar-direction="none" nav-swipe=""><div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar bar-clear bar-header" align-title="center"><div class="title title-center header-item"></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar bar-clear bar-header" align-title="center"><div class="buttons buttons-left"><span class="left-buttons"><button ng-class="{&#39;slide-up&#39;: !postDetailsVm.buttonsVisible, &#39;slide-down&#39;: postDetailsVm.buttonsVisible}" class="button button-icon ion-ios-arrow-back button-clear button-dark post__button-back post__button-back-custom slide-down" data-ng-click="postDetailsVm.goBack()"></button></span></div><div class="title title-center header-item" style="left: 55px; right: 55px;"></div></ion-header-bar></div></ion-nav-bar><ion-nav-view name="postList" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-view cache-view="false" data-ng-show="postDetailsVm.contentLoaded" class="post-ctx pane" state="app.nav.post" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><ion-nav-buttons side="left" class="hide"></ion-nav-buttons><ion-content data-ng-show="postDetailsVm.contentLoaded" scroll-event-interval="50" has-bouncing="false" on-tap="postDetailsVm.handleOnTap()" on-scroll="postDetailsVm.handleOnScroll()" overflow-scroll="true" class="scroll-content ionic-scroll overflow-scroll disable-user-behavior has-header" style=""><div class="scroll"><!-- if the post does have an image --><!-- ngIf: postDetailsVm.post.image.src --><!-- if the post doesn't have an image--><!-- ngIf: !postDetailsVm.post.image.src --><div data-ng-if="!postDetailsVm.post.image.src" class="post__meta-container post__meta-container-custom--no-img p-t-5"><h6 class="post__category post__category-custom d-inline-block m-a-0 ng-binding" data-ng-bind-html="postDetailsVm.category.name | TrustHtmlFilter">Uncategorized</h6><h1 class="h3 post__title post__title-custom text-heading-style m-b-0 m-t-1 ng-binding" data-ng-bind-html="postDetailsVm.post.title | TrustHtmlFilter">Driver Only Package</h1><div class="d-flex flex-wrap"><div class="d-flex"><h6 class="post__author post__author-custom text-body-style m-y-0" translate="TEXTS.BY_AUTHOR">by</h6><h6 class="post__author post__author-custom text-body-style m-y-0 ng-binding">&nbsp;Sung Yun, &nbsp;</h6></div><div class="d-flex"><h6 class="post__date post__date-custom text-body-style m-y-0 ng-binding">November 17, 2021</h6></div></div></div><!-- end ngIf: !postDetailsVm.post.image.src --><!-- content --><div class="post__content-container post__content-container-custom"><div class="post__content post__content-custom"><!-- ngIf: postDetailsVm.post.content --><appticles-ads ng-if="postDetailsVm.post.content" content="postDetailsVm.post.content"><div data-ng-bind-html="adsVm.content1 | TrustHtmlFilter" class="ng-binding">
+<p>The Beta version of Label Writer 5xx Driver only package is ready.</p>
+
+
+
+<p>This release adds&nbsp;support for the Label Writer 5xx series printers, The beta version of Driver can be download from <a href="https://github.com/dymosoftware/Drivers" target="_blank">here</a></p>
+
+
+
+<p>Please check the DYMO Technical Reference document for how driver is working.</p>
+
+
+
+<h1><a class="activated">About the LabelWriter 550 Series Printers</a></h1>
+
+
+
+<p>The LabelWriter 550 series printers (LabelWriter 550, 550 Turbo, 5XL) are high-performance, low-cost printers used for printing mailing labels, postage, file folder labels, bar code labels, and more. The LabelWriter 550 and LabelWriter 550 Turbo printers have a 57 mm wide print head. The LabelWriter 5XL has a 101 mm wide print head. All printers have 300-dpi print head.</p>
+
+
+
+<p>The 57 mm wide thermal print head uses 672 individually addressable dots to form individual raster lines of data at 300 dots per inch across the print head—the 101 mm wide print head uses 1248 dots. Both use 300 dots per inch in the travel direction as directed by the print control data. Because they use specially treated, heat-activated paper, the printers require no ink, toner, or other refills.</p>
+
+
+
+<p>All 550 series printer models connect to a host computer through a standard full-speed USB 2.0-compatible interface. There are no built-in fonts. The host computer is responsible for sending commands and data to the printer to form each individual raster line of data. This is generally performed by printer drivers in the host computer that convert the image of the label into the proper command and data stream required by the printers.</p>
+
+
+
+<p>LabelWriter 550 Turbo and 5XL printers can connect to a host through a 10M/100M Ethernet LAN connection.</p>
+
+
+
+<h2><a>Print Data</a></h2>
+
+
+
+<p>Print data is encoded in strings of 8-bit bytes.</p>
+
+
+
+<p>The default value for LabelWriter 550 and LabelWriter 550 Turbo printers is 84 bytes per line (84 * 8 = 672, the number of dots in the print head)—for LabelWriter 5XL, 156 bytes (156*8=1248, the number of dots in the print head). The host‑computer can send fewer bytes than the maximum within the &lt;esc&gt; D command. The control electronics do not check the validity of the new value. Therefore, it is the responsibility of the host‑software to send only those values which are valid for the width of the print head.</p>
+
+
+
+<p>The Bytes-Per-Line variable is held by the control electronics until they are changed by a new command sequence, is reset to default values by a power-on reset, a software reset command, or after the end of a print job.</p>
+
+
+
+<h2><a></a><a>Print Job</a> Structure</h2>
+
+
+
+<p>The print job structure consists of the following parts:</p>
+
+
+
+<ol type="1"><li>Print Job Header</li><li>Label Structure<ol><li>Label Header</li></ol><ol><li>Label Data</li></ol><ol><li>Label Trailer</li></ol></li><li>Print Job Trailer</li></ol>
+
+
+
+<img src="https://developers.dymo.com/" alt="">
+
+
+
+<h3><a>Print Job Header</a></h3>
+
+
+
+<p>The Print Job Header is the beginning of a print job structure. It is mandatory to have &lt;ESC s&gt; to let the printer know the start of the print job.</p>
+
+
+
+<p>The table below shows the mandatory command for the header section along with optional commands that can be placed in this section.</p>
+
+
+
+Mandatory CommandsStart of Print Job&lt;ESC s&gt;Optional CommandsSet Maximum Label Length&lt;ESC L&gt;Select Text Output Mode or<br>Select Graphics Output Mode&lt;ESC h&gt; or<br>&lt;ESC i&gt;Select Energy Setting&lt;ESC C&gt;Set Output Tray * (will be supported by LW550 Twin Turbo)&lt;ESC q&gt;Select Content Type&lt;ESC T&gt;
+
+
+
+<h3><a>Label Structure</a></h3>
+
+
+
+<p>The Label structure has the following 3 parts:</p>
+
+
+
+<ol type="1"><li>Label Header</li><li>Label Data</li><li>Label Trailer</li></ol>
+
+
+
+<p>The structure must be present for each label that is to be printed in a single print job.</p>
+
+
+
+<h4>Label Header</h4>
+
+
+
+<p>The Label Header is the beginning of the label structure. It is mandatory to have &lt;ESC n&gt; to indicate the label index and &lt;ESC D&gt; to indicate the start of the label print data. See the “Printer Commands” later in this document for more details.</p>
+
+
+
+<p>The table below shows the mandatory command for the header section along with optional commands that can be placed in this section.</p>
+
+
+
+Mandatory CommandsSet Label Index&lt;ESC n&gt;Start of Label Print Data &amp; Label&nbsp;Print&nbsp;Data&lt;ESC D&gt;
+
+
+
+<h4>Label Data</h4>
+
+
+
+<p>The&nbsp;Label&nbsp;Data is the data that will be printed out onto the labels. It is an array of binary data bytes. It’s size equals width*height. ‘0’ means a dot is not printed; ‘1’ means a dot is printed. The most significant bit of the first print data byte represents the lower pixel of the first line. See the &lt;ESC D&gt; command in the “Printer Commands” section later in this document for more details.</p>
+
+
+
+<p>Bytes per line= <strong>roundup(</strong> (height * Bytes Per Pixel) / 8<strong>)</strong></p>
+
+
+
+<h4>Label Trailer</h4>
+
+
+
+<p>The Label Trailer is end of the label structure. It moves the label to either the print head of the next label or to the tear position. It is mandatory that &lt;ESC&nbsp;G&gt; (Feed to Print Head) or &lt;ESC&nbsp;E&gt; (Feed to Tear Position) be used in this section.</p>
+
+
+
+Mandatory CommandsFeed to Print Head&lt;ESC&nbsp;G&gt;Feed to Tear Position&lt;ESC&nbsp;E&gt;
+
+
+
+<h3><a>Print Job Trailer</a></h3>
+
+
+
+<p>The print Job Trailer is the final part of the print job structure. It is mandatory to use the &lt;ESC&nbsp;Q&gt; command to end the print job.</p>
+
+
+
+<h2><a>Data Synchronization</a></h2>
+
+
+
+<p>After the printer receives a Lock Request from the host, the printer will respond. (See Print Status Response section for details.) The host (Host‑A) will be granted a lock only if the printer is not printing. Once the lock is granted, the Host‑A will begin to send the print data for the current print job with the &lt;ESC s&gt; command. (See “Print Job Structure” section above for additional details). If another host (Host‑B) requests the printer’s status, the printer will respond that it is printing. No other host can interrupt the print job of Host-A.</p>
+
+
+
+<p>The data goes into a buffer and the printer sorts through the various commands applying the print job settings.</p>
+
+
+
+<p>The data between the height value in the &lt;ESC D&gt; command and before &lt;ESC G&gt; or &lt;ESC E&gt; is the data that will be printed, also referred to as print data.</p>
+
+
+
+<h2><a>Label Positioning</a></h2>
+
+
+
+<p>A motor-driven platen, which acts as a pinch roller, controls label movement within the printer. The control electronics track label travelling positions. An infrared LED photocell detects the top-of-form sense hole that is located between labels. The absolute positions of the label and the tear bar are calculated based up the reading of an infrared LED photocell sensor.</p>
+
+
+
+<h2><a>Top-of-Form Sync</a></h2>
+
+
+
+<p>At power up, label position is always assumed to be correct. If an Out of Paper condition is detected at power up, user requires to press form feed button and the stepper motor will advance until label load to Top-of-Form tear bar position. &nbsp;</p>
+
+
+
+<h2><a>Label Length</a></h2>
+
+
+
+<p>The label length is determined by the SKU data found on the NFC Tag.</p>
+
+
+
+<p>If the roll has continuous form paper the Form Feed command (&lt;esc&gt; E) is changed to feed enough dot lines to allow for the last line of print data to extend past the printer tear-bar.</p>
+
+
+
+<p>The host can use &lt;esc&gt; L to Set Length to Continuous Stock. See more details in the “Printer Commands” section later in this document. Only authentic Dymo labels with a valid NFC Tag can be used for printing.</p>
+
+
+
+<h2><a>Label-Movement Commands</a></h2>
+
+
+
+<p>There are two label-movement commands implemented in the LabelWriter 550 Series: Form Feed, Short Form Feed. These commands operate as follows.</p>
+
+
+
+<h3><a>Form Feed Command (&lt;esc&gt; E)</a></h3>
+
+
+
+<p>This command advances the most recently printed label to a position where it can be torn off. This positioning places the next label beyond the starting print position. Therefore, a reverse-feed will be automatically invoked when printing the next label. Use Feed to Print Head (Short Form Feed) to optimize print speed and to eliminate the reverse feeding when printing multiple labels.</p>
+
+
+
+<h3><a>Short Form Feed Command (&lt;esc&gt; G)</a></h3>
+
+
+
+<p>This command feeds the next label into print position (die-cut labels). The most recently printed label might still be partially inside the printer and cannot be torn off or cut. This command is meant to be used between labels on a multiple label print job.</p>
+
+
+
+<p>Use this command when printing multiple labels. The normal Form Feed command also works for this purpose. However, using the Short Form Feed command optimizes the printer and minimizes print time by eliminating the need to reverse feed after advancing the top-of-form mark to the tear bar, as the normal Form Feed command does. The Short Form Feed command advances the printed label just far enough to place the next label in position for printing. Because of the mechanics of the printer, the preceding label will still be partially within the label exit slot. For a label to be in tear-off position, you must use the normal Form Feed command (&lt;esc&gt; E).</p>
+
+
+
+<h2><a>Print Status Response</a></h2>
+
+
+
+<p>The LabelWriter 550 series responds to status request with 32 bytes dedicated to reporting its current state.</p>
+
+
+
+<p>The host requests the status from the printer by issuing an &lt;ESC A&gt; command (See the “Printer Command” section later in the document for more details).</p>
+
+
+
+<h1><a>Self-Test Capability</a></h1>
+
+
+
+<p>The printers include a self-test capability in the form of canned print patterns. To activate the self-test, press the form-feed button and power button together and hold it down for approximately 10 seconds. The self-test will start printing a repeating series of test patterns. To stop the self-test, press the form-feed button a second time.</p>
+
+
+
+<h1><a>Print Mode</a></h1>
+
+
+
+<p>The LabelWriter 550 series features the following print modes:</p>
+
+
+
+<ul><li>Text</li><li>Barcode and Graphics</li></ul>
+
+
+
+<p>The LabelWriter 550 and LabelWriter 550 Turbo has the additional print mode:</p>
+
+
+
+<ul><li>High Speed ***NOTE: Not all label rolls have the high-speed feature***</li></ul>
+
+
+
+<strong>Printer Model</strong><strong>Print Mode</strong>TextBarcode and GraphicsHigh SpeedDYMO LabelWriter 550üüüDYMO LabelWriter 550 TurboüüüDYMO LabelWriter 5XLüüN/A
+
+
+
+<p>For better accuracy of dot placement and sizing, the LabelWriter 550 series printers incorporate a feature which allows the host computer to specify a 300 x 300 dpi Barcode and Graphics print mode. In Barcode and Graphics mode, the print quality is improved by a reduction in print speed which provides smooth and even printing, resulting in greater regularity of dot darkness and size. This mode may improve print quality of smaller barcodes and some graphic images. This creates more precise dots for better image quality.</p>
+
+
+
+<h1><a>Low Power Mode</a></h1>
+
+
+
+<p>The LabelWriter 550 series includes an automatic power saving feature. After 30 seconds of inactivity the printer will shut down its unused internal peripherals and dim its LEDs. Pressing the power button while the printer is in this state will cause it to resume normal operation rather than feeding a label. If print data is sent to the printer while it is in Low Power mode it will automatically resume full operation.</p>
+
+
+
+<h1><a>Power Requirements</a></h1>
+
+
+
+<p>The LabelWriter 550 series printers are normally supplied with an external, universal (100 – 240 VAC) AC power adapter. For OEM applications, a DC voltage can also be supplied to the main printed circuit board (PCB) of the printer using the JP2 connector.</p>
+
+
+
+<p><strong>Note: </strong>The printers have been tested and certified for EMC and safety requirements using the supplied AC adapter. Supplying a non-DYMO power source may change the EMC and safety certifications.</p>
+
+
+
+<p>Input power is variable based on the amount of information printed and the duty cycle of the label printing.</p>
+
+
+
+<p>The printer driver (print commands from the host computer) controls some printing parameters and will change maximum power usage.</p>
+
+
+
+<h2><a>AC Adapter</a></h2>
+
+
+
+<strong>LabelWriter 550</strong>Model &nbsp;DSA-42PFC-24 2 240175 (42.0W)Input voltage100 – 240 VAC, 50/60 Hz, 1.2 AmpsOutput voltage24 VDC, 1.75Amps<strong>LabelWriter 550 Turbo</strong>DYMO part numberDYS865-240250W (60.0W)Input voltage100 – 240 VAC, 50/60 Hz, 1.5 AmpsOutput voltage24 VDC, 2.5Amps<strong>LabelWriter 5XL</strong>DYMO part numberDSA-96PFB-24 2 240375 (90.0W)Input voltage100 – 240 VAC, 50/60 Hz, 1.5 AmpsOutput voltage24 VDC, 3.75Amps
+
+
+
+<h2><a>Connectors</a></h2>
+
+
+
+<p><strong>JP2:</strong><br>DC jack, 5.5 mm O.D. x 2.5 mm I.D. Center Positive</p>
+
+
+
+<h1><a>USB Printer Interface</a></h1>
+
+
+
+<p>The LabelWriter 550 series printers all communicate with the host computer using a full-speed USB 2.0 interface. This interface also operates with USB Version 1.1 or later. The printers implement the standard USB Printer Class Device interface for communications (see http://www.usb.org/developers/devclass/).</p>
+
+
+
+<p>While it is not the purpose of this section to define how to write a USB driver for a printer device, this section provides some product specific information that is required for any USB device.</p>
+
+
+
+<p>Each USB device provides plug-and-play information when it is connected to a host computer. This information includes a manufacturer specific, or Vendor, ID (VID) and a product specific ID (PID). These identifiers, when combined with the class type provided during USB enumeration, are sufficient to identify the driver to load.</p>
+
+
+
+<h2><a>USB Vendor ID</a></h2>
+
+
+
+<p>The USB Vendor ID (VID) assigned to DYMO by the USB Implementers Forum is 0x0922h (2338 Decimal).</p>
+
+
+
+<h2><a>USB Product IDs</a></h2>
+
+
+
+<p>Each printer has a unique Product ID, as shown in the table below.</p>
+
+
+
+<strong>Printer Model</strong><strong>Product ID (Hex)</strong>DYMO LabelWriter 5500x0028DYMO LabelWriter 550 Turbo0x0029DYMO LabelWriter 5XL0x002A
+
+
+
+<h1><a>LAN Printer Interface</a></h1>
+
+
+
+<p>The LabelWriter 550 Turbo and LabelWriter 5XL printers are also able to communicate with the host computer using 10M/100M Ethernet LAN connection.</p>
+
+
+
+<p>The printer will auto-connect upon ethernet cable plugin into the RJ45 connector.<br><br><br></p>
+
+
+
+<h2><a>IP Address</a></h2>
+
+
+
+<p>IPv4 protocol is supported.<br><br>By default, IP address of the LabelWriter 550 Turbo and LabelWriter 5XL printers will be obtained by DHCP. &nbsp;Communication will be enabled upon successful assignment of IP address.</p>
+
+
+
+<h2><a>mDNS</a></h2>
+
+
+
+<p>The mDNS protocol is used to discover printer on the network and conforms with mDNS protocol (RFC 6762/6763) specifications. The port used for this service is 5353.<br><br>Below are the mDNS strings used for printers with a LAN interface:</p>
+
+
+
+<strong>Printer</strong><strong>Supported Profiles &amp; protocols</strong>DYMO LabelWriter 550 TurboDYMO LabelWriter 550 Turbo on <strong>DYMOLW550T&lt;6 digit MAC Address&gt;E</strong>DYMO LabelWriter 5XLDYMO LabelWriter 5XL on <strong>DYMOLW5XL&lt;6 digit MAC Address&gt;E</strong>
+
+
+
+<h1><a>Printer Commands</a></h1>
+
+
+
+<p>All LabelWriter 550 series printers implement the same basic commands. </p>
+
+
+
+<h2><a>Commands Sent to the Printer</a></h2>
+
+
+
+<p>The commands implemented by the LabelWriter printer are as follows. Note that each command is listed with its mnemonic (&lt;ESC&gt; s as well as its hexadecimal representation (1B 73). Parameter values are specified as “n” for single byte values or “n1 n2” for two-byte values.</p>
+
+
+
+<h3><a>ESC s &nbsp;&nbsp; Start of Print Job</a></h3>
+
+
+
+<p>1B 73</p>
+
+
+
+<p>Indicates a new print job. A unique job ID is passed along with this command.</p>
+
+
+
+<p>Format:</p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong><strong>3</strong><strong>4</strong><strong>5</strong>&nbsp;‘ESC’‘s’Job ID
+
+
+
+<h3><a>ESC L &nbsp;&nbsp; Set Maximum Label Length</a></h3>
+
+
+
+<p>1B 4C</p>
+
+
+
+<p>Sets the print engine mode between normal label stock and continuous label stock. Normal label stock is the default mode for the print engine.</p>
+
+
+
+<h3><a>ESC h &nbsp; Select Text Output Mode</a></h3>
+
+
+
+<p>1B 68</p>
+
+
+
+<p>Tells the print engine that the label shall be printed with the print settings which are ideal for text. Text mode is the default printer setting.</p>
+
+
+
+<h3><a>ESC i &nbsp;&nbsp; Select Graphics Output Mode</a></h3>
+
+
+
+<p>1B 69</p>
+
+
+
+<p>Tells the print engine that the label shall be printed with the print settings which are ideal for graphics and barcodes. The print speed might be reduced in this mode.</p>
+
+
+
+<h3><a>ESC T &nbsp; Content Type</a></h3>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong><strong>&nbsp;</strong>‘ESC’‘T’Speed Mode
+
+
+
+<p>1B 74</p>
+
+
+
+<p>Sets the speed of the printer. Default is Normal Speed (0x10).</p>
+
+
+
+Byte ValueMeaning0x10Normal Speed0x20High Speed
+
+
+
+<h3><a>ESC n &nbsp; Set Label Index</a></h3>
+
+
+
+<p>1B 6E</p>
+
+
+
+<p>Sets the label index. The same label index is returned int eh print status providing the host the possibility to track which label is being printed.<br>Default value is 0.<br><br></p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong><strong>3</strong><strong>&nbsp;</strong>‘ESC’‘n’Label Index
+
+
+
+<h3><a>ESC D &nbsp; Start of Label Print Data &amp; Label Print Data</a></h3>
+
+
+
+<p>1B 44</p>
+
+
+
+<p>Indicates the start of the label print data and notifies the print engine about the label’s height and width. The height is defined in dots while the width specifies the number of lines. The width does not include the leader and trailer.</p>
+
+
+
+<p>Format:</p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong><strong>3</strong><strong>4</strong><strong>5</strong><strong>6</strong><strong>7</strong><strong>8</strong><strong>9</strong><strong>10</strong><strong>11</strong><strong>12</strong><strong>13</strong><strong>14</strong><strong>…</strong><strong>n</strong><strong>&nbsp;</strong>‘ESC’‘D’BPPAlignWidthHeightPrint Data
+
+
+
+<img src="https://developers.dymo.com/" alt="">
+
+
+
+<strong>Byte</strong><strong>Name</strong><strong>Description</strong>2BPPDefault value is 1.<br><br>3AlignmentPrint Alignment 2: BottomByte&nbsp;4 to Byte&nbsp;7WidthNumber of lines Range: 0 to 2<sup>32</sup>Byte&nbsp;8 to Byte&nbsp;11HeightNumber of dots Range: 0 to 2<sup>32</sup>Byte&nbsp;12 to Byte&nbsp;nPrint DataThe data that will be printed onto the label(s)
+
+
+
+<h3><a>ESC G&nbsp;&nbsp; Feed to Print Head (Short Form Feed)</a></h3>
+
+
+
+<p>1B 47</p>
+
+
+
+<p>Feeds the next label into print position. The most recently printed label might still be partially inside the printer and cannot be torn off. This command is meant to be used between labels on a multiple label print job.</p>
+
+
+
+<h3><a>ESC E&nbsp;&nbsp; Feed to Tear Position (Long Form Feed)</a></h3>
+
+
+
+<p>1B 45</p>
+
+
+
+<p>Advances the most recently printed label to a position where it can be torn off by the automatic cutter. This positioning places the next label beyond the starting print position. Reverse-feed will be automatically invoked when printing the next label.</p>
+
+
+
+<h3><a>ESC Q&nbsp;&nbsp; End of Print Job</a></h3>
+
+
+
+<p>1B 51</p>
+
+
+
+<p>Indicates the end of a print job. Upon reception of this command the print engine will release the connection and start accepting other print jobs.</p>
+
+
+
+<h3><a>ESC A&nbsp;&nbsp; Request Print Engine Status</a></h3>
+
+
+
+<p>1B 41</p>
+
+
+
+<p>Requests the current printer status, such as errors and label size of inserted label printers. It takes a lock byte as parameter. When this lock byte contains a value other than zero, the print engine will attempt to reserve the interface for printing for the maximum duration of 10 seconds or until useful commands are received (any print jobs from other sources are rejected during this period).&nbsp; If useful data activity lapses for 10 seconds or more at any point during the connection, the connection shall be closed by the print server. Printer driver uses ESC A 0, 1 and 2 to query printer’s status.<br>&nbsp;<img width="470" height="280" src="https://developers.dymo.com/" alt=""></p>
+
+
+
+<p>Print Status Response:</p>
+
+
+
+<strong>Byte</strong><strong>Bits</strong><strong>Name</strong><strong>Description</strong>Byte 0b7…b0Print statusThe actual print engine status.<br><br>Type: predefined values<br>Default value: 0<br>Range:<br>0 = idle:<br>1 = printing<br>2 = error 3 = cancel 4 = busy 5 = Unlock &nbsp; 0-3: Once lock is granted to active host, status replies by active host 4: after printer wakes up from standby 5: Status reply before lock is granted to active hostByte 4… Byte 1b31…b0Print job IDThe Job ID of the ongoing print process.<br><br>Type: u32<br>Default value: 0<br>Range:<br>0 = printer idle<br>1…2<sup>32</sup> = Job IDByte 6… Byte 5b15…b0Label indexThe index of the label/page currently being printed.<br><br>Type: u16<br>Default value: 0<br>Range:<br>0…2<sup>16</sup> = indexByte 7b7…b0ReservedDefault value: 0Byte 8b7…b0Print head statusThe actual thermal print head status.<br><br>Type: predefined values<br>Default value: 2<br>Range:<br>0 = ok<br>1 = overheated<br>2 = status unknownByte 9b7…b0Print densityThe actual print density setting in %.<br><br>Type: u8<br>Default value: 100<br>Range:<br>0 = disable printing<br>1…200 = density in %Byte 10b7…b0Main bay&nbsp; statusThe status of the main bay.<br><br>Type: predefined values<br>Default value: 0<br>Range:<br>0 = bay status unknown<br>1 = bay open; media presence unknown<br>2 = no media present<br>3 = media not inserted properly<br>4 = media present – media status unknown<br>5 = media present – empty<br>6 = media present – critically low<br>7 = media present – low<br>8 = media present – ok<br>9 = media present – jammed<br>10 = media present – counterfeit mediaByte 22… Byte 11B95…b0SKU InfoThe SKU of the inserted consumable &nbsp; Type: char Default value: 0 (empty) XXXXXXXX = SKUByte 26… Byte 23b31…b0Error IDThe ID of the present error.<br><br>Type: u32<br>Default value: 0<br>Range:<br>0 = no error present<br>1…2<sup>32</sup> = error codesByte 28 Byte 27B15…b0Label countRemaining count of inserted consumable &nbsp; Type: u16 Default value: 0 (empty)Byte 29b3…b0EPS StatusThe status of the external power supply.<br><br>1 = EPS presentb7…b4ReservedDefault value: 0Byte 30b3…b0Print Head VoltagePrint Head Voltage<br><br>Type: predefined values<br>Default value: 0<br>Range:<br>0 = unknown<br>1 = ok<br>2 = low<br>3 = critically low<br>4 = too low for printingb7…b4ReservedDefault value: 0Byte 31b7…b0ReservedDefault value: -1<br><br>
+
+
+
+<h3><a>ESC C&nbsp;&nbsp; Set Print Density</a></h3>
+
+
+
+<p>1B 43</p>
+
+
+
+<p>Sets the strobe time of the printer to a given percentage of its standard duty cycle. A lower value results in lighter printouts while a higher value leads to darker printouts. Default value is 100. Duty range is 0-200%.</p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong>&nbsp;‘ESC’‘C’Duty
+
+
+
+<h3><a>&nbsp;</a></h3>
+
+
+
+<h3>ESC e&nbsp;&nbsp; Reset Print Density to Default</h3>
+
+
+
+<p>1B 65</p>
+
+
+
+<p>Resets the print density to default value of 100%.</p>
+
+
+
+<h3><a>ESC U&nbsp;&nbsp; Get SKU Information</a></h3>
+
+
+
+<p>1B 55</p>
+
+
+
+<p>Used to retrieve the inserted LW550 Consumable SKU information from NFC.</p>
+
+
+
+<p>The following is the 63-Byte response to ESC U:</p>
+
+
+
+<strong>Byte</strong><strong>Bits</strong><strong></strong><strong>Name</strong><strong>Description</strong>Byte 1… Byte 0b15…b0Magic number0xCAB6Byte 2b7…b0VersionCurrent version is ‘0’Byte 3b7…b0Length&nbsp;Byte 7… Byte 4b15…b0CRC&nbsp;Byte 19… Byte 8b95…b0SKU #The SKU # of inserted<br>Type: char Default value: 0<br>Range:<br>1…12 = SKU #Byte 20b7…b0Brand IDType: predefined values<br><br>Default value: 0x00 &nbsp; 0x00 = DYMO 0x01-0xFF = Undefined<br><br>Byte 21b7…b0RegionType: predefined values<br><br>Default value: 0xFF &nbsp; 0xFF = Global 0x00-0xFE = UndefinedByte 22b7…b0Material TypeThe type of label material<br><br>Type: predefined values<br><br>Range:<br>0x00 = Card<br>0x01 = Clear 0x02 = Durable 0x03 = Paper 0x04 = Permanent 0x05 = Plastic 0x06 = Removable 0x07 = Time exp. 0x08 – 0xFF = UndefinedByte 23b7…b0Label TypeLabel Type &nbsp; Type: predefined values<br><br>Range:<br>0x00 = Continuous<br>0x01 = Die 0x02 = Card 0x03 – 0xFF = UndefinedByte 24b7…b0Label Color &nbsp;Label Color &nbsp; Type: predefined values<br><br>Range:<br>0x00 = Clear<br>0x01 = White 0x02 = Pink 0x03 = Yellow 0x04 = Green 0x05 = Blue 0x06 – 0xFF = UndefinedByte 25b7…b0Content ColorContent Color &nbsp; Type: predefined values<br><br>Range:<br>0x00 = Black<br>0x01 = Red/Black 0x02 – 0xFF = UndefinedByte 26b7…b0Marker TypeMarker Type &nbsp; Type: predefined values<br><br>Range:<br>0x00 = Marker 1 front edge indicates offset to cut location and offset to start of label<br>0x01 = Marker 1 front edge indicates offset to cut location and Marker 1 rear edge indicates offset to start of label &nbsp; 0x02 = Marker 1 front edge indicates offset to start of label and Marker 1 rear edge indicates offset to cut location 0x03 = Marker 1 front edge indicates cut location and Marker 2 front edge indicates offset to start of label &nbsp; 0x04 – 0xFF = UndefinedByte 27b7….b0Reserved&nbsp;Byte 29 … Byte 28b15…b0Marker PitchMarker Pitch<br><br>Type: u16 1 – 2^16 = length in mmByte 31 … Byte 30b15…b0Marker1 widthMarker1 width<br><br>Type: u16 1 – 2^16 = length in mmByte 33 … Byte 32b15…b0Marker1 to start of labelMarker1 to start of label<br><br>Type: u16 1 – 2^16 = length in mmByte 35 … Byte 34b15…b0Marker2 widthMarker2 width<br><br>Type: u16 1 – 2^16 = length in mmByte 37 … Byte 36b15…b0Marker2 offsetMarker2 offset<br><br>Type: u16 1 – 2^16 = length in mmByte 39 … Byte 38b15…b0Vertical offset &nbsp;Vertical offset<br>Type: u16 1 – 2^16 = length in mmByte 41 … Byte 40b15…b0Label lengthLabel length<br><br>Type: u16 1 – 2^16 = length in mmByte 43 … Byte 42b15…b0Label width &nbsp;Label width<br>Type: u16 1 – 2^16 = length in mmByte 45 … Byte 44b15…b0Printable area horizontal offset &nbsp;Printable area horizontal offset<br>Type: u16 1 – 2^16 = length in mmByte 47 … Byte 46b15…b0Printable area vertical offsetPrintable area vertical offset<br><br>Type: u16 1 – 2^16 = length in mmByte 49 … Byte 48b15…b0Liner widthLiner width<br><br>Type: u16 1 – 2^16 = length in mmByte 51 … Byte 50b15…b0Total label count&nbsp;Byte 53… Byte 52b15…b0Total LengthLength of roll<br><br>Type: u16 1 – 2^16 = length in mmByte 55 … Byte 54b15…b0Counter MarginUsed to determine remaining labels on roll or limit usageByte 56b7…b0Counter StrategyType: predefined values<br><br>Range: 0x00 = Counting up from 0x0000 to “amount of labels” + “counter margin” 0x01 = Counting up from 0xFFFF – “amount of labels” – “Counter margin” to 0xFFFF 0x02 – 0xFF = UndefinedByte 59, Byte 57b23…b0Reserved&nbsp;Byte 61, Byte 60b15…b0Production dateDDYY formatByte 63, Byte 62b15…b0Production timeHHMM format
+
+
+
+<h3><a>ESC V&nbsp;&nbsp; Request Print Engine Version</a></h3>
+
+
+
+<p>1B 56</p>
+
+
+
+<p>Used to retrieve version information of the print engine.</p>
+
+
+
+<p>Format:</p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>…</strong><strong>15</strong><strong>16</strong><strong>…</strong><strong>31</strong><strong>32</strong><strong>33</strong>&nbsp;HW VersionFW VersionProduct ID
+
+
+
+<p><strong>HW Version:<br></strong><em>Byte 0 to 15</em><br>This is the hardware version as a 16-character UTF-8 encoded string.</p>
+
+
+
+<p><strong>FW Version:<br></strong><em>Byte 16 to 31</em><br>This is the firmware version as a 16-character UTF-8 encoded string.<br><br></p>
+
+
+
+<strong>Byte</strong><strong>Meaning</strong>16 to 19Application FW Version: “FWAP”<br>Boot Loader FW Version: “FWBL”20 to 23Major Release Version24 to 27Minor Release Version28 to 31Release Date<br><em>Format: MMYY</em>
+
+
+
+<p><strong>PID:<br></strong><em>Byte 32 to 33<br></em>Two bytes of USB PID<br><br></p>
+
+
+
+<h3><a>ESC @&nbsp; Restart Print Engine</a></h3>
+
+
+
+<p>1B 40</p>
+
+
+
+<p>Reboots the print engine.</p>
+
+
+
+<h3><a>ESC *&nbsp;&nbsp; Restore Print Engine Factory Settings</a></h3>
+
+
+
+<p>1B 24</p>
+
+
+
+<p>Restores all the factory settings of the printer.</p>
+
+
+
+<h3>&nbsp;<a>ESC o&nbsp; Set Label Count</a></h3>
+
+
+
+<p>Sets label count.</p>
+
+
+
+<strong>BYTE</strong><strong>0</strong><strong>1</strong><strong>2</strong>&nbsp;‘ESC’‘o’Count
+
+
+
+<p></p>
+
+
+
+<div><a></a></div>
+</div><!-- ngIf: adsVm.hasAds --><div data-ng-bind-html="adsVm.content2 | TrustHtmlFilter" class="ng-binding"></div></appticles-ads><!-- end ngIf: postDetailsVm.post.content --></div></div></div></ion-content><div side="right" class="bar bar-footer bar-clear ex-bar-footer ex-bar-footer-custom"><!-- ngIf: postDetailsVm.hasSocialNetworks || (postDetailsVm.directiveApi.data !== null && postDetailsVm.directiveApi.data.has_comments) --><div ng-if="postDetailsVm.hasSocialNetworks || (postDetailsVm.directiveApi.data !== null &amp;&amp; postDetailsVm.directiveApi.data.has_comments)"><!-- ngIf: postDetailsVm.directiveApi.data !== null --><button class="button button-icon button-clear ion-android-share-alt post__ex-social-btn post__ex-social-btn-custom position-absolute m-a-0" ng-class="{&#39;footer-slide-down&#39;: !postDetailsVm.buttonsVisible || postDetailsVm.directiveApi.modalTriggered}" appticles-social="" data-ng-if="postDetailsVm.directiveApi.data !== null " data-ng-click="postDetailsVm.directiveApi.triggerModal()" directive-api="postDetailsVm.directiveApi" style=""></button><!-- end ngIf: postDetailsVm.directiveApi.data !== null --></div><!-- end ngIf: postDetailsVm.hasSocialNetworks || (postDetailsVm.directiveApi.data !== null && postDetailsVm.directiveApi.data.has_comments) --></div></ion-view></ion-nav-view></ion-view></ion-nav-view></ion-side-menu-content><ion-side-menu side="right" is-enabled="true" width="275" class="menu menu-right" style="width: 275px;"><ion-nav-view name="sideNavView" class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-view cache-view="false" class="side-nav-ctx pane" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><ion-content class="side-nav__container side-nav__container-custom scroll-content ionic-scroll"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);"><!-- ngIf: navSideVm.menuItem == 'root' && navSideVm.contentLoaded --><div data-ng-if="navSideVm.menuItem == &#39;root&#39; &amp;&amp; navSideVm.contentLoaded" class="animate-repeat" style=""><div data-ui-sref="app.nav.latest" menu-close="" class="side-nav__categories-container side-nav__categories-container-custom d-flex vertical-align" href="#/"><h4 class="side-nav__categories-title side-nav__categories-title-custom m-a-0" translate="LINKS.HOME">Home</h4></div><!-- ngIf: navSideVm.hasCategories --><div data-ng-if="navSideVm.hasCategories" data-ng-click="navSideVm.openCategories()" class="side-nav__categories-container side-nav__categories-container-custom d-flex space-between vertical-align"><h4 class="side-nav__categories-title side-nav__categories-title-custom text-ellipsis m-a-0" translate="LINKS.CATEGORIES">Categories</h4><i class="icon button-icon side-nav__icon side-nav__icon-custom ion-ios-arrow-right"></i></div><!-- end ngIf: navSideVm.hasCategories --><!-- ngIf: navSideVm.hasPages --><div data-ng-if="navSideVm.hasPages" data-ng-click="navSideVm.openPages()" class="side-nav__static-pages-container side-nav__static-pages-container-custom d-flex space-between vertical-align"><h4 class="side-nav__static-pages-title side-nav__static-pages-title-custom text-ellipsis m-a-0" translate="LINKS.GO_TO">Go to</h4><i class="icon button-icon side-nav__icon side-nav__icon-custom ion-ios-arrow-right"></i></div><!-- end ngIf: navSideVm.hasPages --><!-- link to website --><!-- ngIf: navSideVm.websiteUrl --><div data-ng-if="navSideVm.websiteUrl" data-ng-click="navSideVm.openDesktopWebsite()" class="side-nav__go-to-container side-nav__go-to-container-custom"><h4 class="side-nav__go-to-title side-nav__go-to-title-custom text-ellipsis" translate="LINKS.VISIT_WEBSITE">Visit website</h4></div><!-- end ngIf: navSideVm.websiteUrl --></div><!-- end ngIf: navSideVm.menuItem == 'root' && navSideVm.contentLoaded --><!-- categories list --><!-- ngIf: navSideVm.menuItem == 'categories' && navSideVm.hasCategories && navSideVm.contentLoaded --><!-- pages list --><!-- ngIf: navSideVm.menuItem == 'pages' && navSideVm.hasPages && navSideVm.contentLoaded --></div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 0px;"></div></div></ion-content></ion-view></ion-nav-view></ion-side-menu></ion-side-menus></ion-nav-view>
+<script defer="" src="./DYMO Developer SDK Support Blog_files/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;7a5c3b23389b4480&quot;,&quot;token&quot;:&quot;4f5ac332cc8b4575b2152e5a3799d62e&quot;,&quot;version&quot;:&quot;2023.2.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<div class="backdrop"></div><div class="loading-container"><div class="loading"></div></div></body></html>
