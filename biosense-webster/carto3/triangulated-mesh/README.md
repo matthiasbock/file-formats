@@ -1,14 +1,23 @@
 
-## Biosense Webster CARTO3 Triangulated Mesh file format
+## Biosense Webster Carto3 Triangulated Mesh file format
 
-* human-readable ASCII
-* ini-style syntax:
-  * header with magic string
-  * sections in brackets: []
-  * within sections: one value assignment per line
-  * target value + "=" + assigned value + "\n"
-  * arbitrary amount of whitespace between beginning of a line, variable name, operators and literals
-  * lines beginning with a colon are comments
+* Vendor: Biosense Webster
+* Software: Carto3
+* Designation: Triangulated Mesh file format, 2008
+* File extension: .mesh
+* Encoding: ASCII
+* Readability: human-readable
+
+## Syntax
+
+* ini-style:
+* header with format magic: "#TriangulatedMeshVersion2.0"
+* lines beginning with a colon are comments
+* file is comprised of sections
+* section name in brackets: []
+* within sections attributes are defined: one key-value pair per line
+* target value + "=" + assigned value + "\n"
+* arbitrary amount of whitespace between beginning of a line, variable name, operators and literals
 
 ### Header
 
