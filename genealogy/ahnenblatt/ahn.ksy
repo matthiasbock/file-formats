@@ -8,38 +8,9 @@ types:
   file_magic:
     seq:
       - id: value
-        type: strz
+        contents: dbk
 
   sized:
-    types:
-      software_author:
-        seq:
-          - id: value
-            type: strz
-      software_version:
-        seq:
-          - id: value
-            type: strz
-      date_format:
-        seq:
-          - id: value
-            type: strz
-      field_name:
-        seq:
-          - id: value
-            type: strz
-      field_reference:
-        seq:
-          - id: value
-            type: strz
-      field_value:
-        seq:
-          - id: value
-            type: strz
-      sibling:
-        seq:
-          - id: value
-            type: strz
     params:
       - id: type
         type: u1
@@ -48,33 +19,19 @@ types:
         type: u2
       - id: value
         size: size
-        # type:
-        #   switch-on: type
-        #   cases:
-        #     # 210: header_unknown1
-        #     202: software_version
-        #     201: software_author
-        #     203: strz # data title
-        #     # 204: header_unknown2
-        #     # 206: header_unknown3
-        #     # 207: header_unknown4
-        #     # 208: header_unknown5
-        #     209: date_format
-        #     # 212: header_unknown7
-        #     # 213: header_unknown8
-        #     # 214: header_unknown9
+        type:
+          switch-on: type
+          cases:
+            201: strz
+            202: strz
+            203: strz
+            204: u2
+            206: u2
+            207: u2
+            208: u1
+            209: strz
 
-        #     # 192: field_bool_unknown1
-        #     192: field_name
-        #     193: field_reference
-        #     # 194: field_comment
-        #     195: field_value
-
-        #     181: strz # reference id? date value
-        #     182: strz # reference id? time value
-
-        #     # Sibling's first name
-        #     112: sibling
+            192: strz
 
   attribute:
     seq:
@@ -87,6 +44,7 @@ types:
 
     enums:
       command:
+        0: begin_genealogy
         1: end_of_record
         2: begin_software
 
@@ -98,18 +56,17 @@ types:
 
         0x63: end_of_file
 
-        # 210: header_unknown1
-        202: software_version
         201: software_author
-        203: strz # data title
-        # 204: header_unknown2
-        # 206: header_unknown3
-        # 207: header_unknown4
-        # 208: header_unknown5
+        202: software_version
+        203: submitter
+        204: unknown_int1
+        206: unknown_int2
+        207: unknown_int3
+        208: unknown_int4
         209: date_format
-        # 212: header_unknown7
-        # 213: header_unknown8
-        # 214: header_unknown9
+        212: unknown_empty1
+        213: unknown_empty2
+        214: unknown_empty3
 
         191: dict_item_depth
         192: dict_key
@@ -118,18 +75,12 @@ types:
         195: dict_value_as_reference_byte
         196: dict_values_as_references_bytes
 
-        # 181: strz # reference id? date value
-        # 182: strz # reference id? time value
-
-        # Sibling's first name
-        112: sibling
-
   record:
     seq:
     - id: attributes
       type: attribute
       repeat: until
-      repeat-until: _.type.to_i < 2 or _.type.to_i == 0x63
+      repeat-until: _.type.to_i == 1 or _.type.to_i == 0x63 or attributes.size > 1000
 
 seq:
   - id: file_magic
@@ -138,4 +89,5 @@ seq:
   - id: records
     type: record
     repeat: until
-    repeat-until: _.attributes.last.type.to_i == 0x63
+    repeat-until: _.attributes.last.type.to_i == 0x63 or records.size > 1000
+
