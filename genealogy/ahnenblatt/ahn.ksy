@@ -76,7 +76,7 @@ types:
         #     # Sibling's first name
         #     112: sibling
 
-  entry:
+  attribute:
     seq:
       - id: type
         type: u1
@@ -87,10 +87,15 @@ types:
 
     enums:
       command:
-        1: end_of_sequence
-        2: begin_meta_software
+        1: end_of_record
+        2: begin_software
+
+        # individual persion
         3: begin_individual
-        4: begin_meta_file
+
+        # family, location
+        4: begin_other
+
         0x63: end_of_file
 
         # 210: header_unknown1
@@ -106,12 +111,12 @@ types:
         # 213: header_unknown8
         # 214: header_unknown9
 
-        191: field_begin
-        192: field_key
-        193: field_value_reference_string
-        194: field_value_literal
-        195: field_value_reference_byte
-        196: field_value_references_bytes
+        191: dict_item_depth
+        192: dict_key
+        193: dict_value_as_reference_string
+        194: dict_value_literal
+        195: dict_value_as_reference_byte
+        196: dict_values_as_references_bytes
 
         # 181: strz # reference id? date value
         # 182: strz # reference id? time value
@@ -119,10 +124,10 @@ types:
         # Sibling's first name
         112: sibling
 
-  sequence:
+  record:
     seq:
-    - id: entries
-      type: entry
+    - id: attributes
+      type: attribute
       repeat: until
       repeat-until: _.type.to_i < 2 or _.type.to_i == 0x63
 
@@ -130,8 +135,7 @@ seq:
   - id: file_magic
     type: file_magic
 
-  - id: blocks
-    type: sequence
+  - id: records
+    type: record
     repeat: until
-    repeat-until: _.entries.first.type.to_i == 0x63
-
+    repeat-until: _.attributes.last.type.to_i == 0x63
